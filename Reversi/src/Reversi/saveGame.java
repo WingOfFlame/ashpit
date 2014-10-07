@@ -1,4 +1,4 @@
-package Reversi_UI;
+package Reversi;
 
 
 

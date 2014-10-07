@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Reversi_UI;
+package Reversi;
 
 import java.io.IOException;
 import java.util.logging.Level;

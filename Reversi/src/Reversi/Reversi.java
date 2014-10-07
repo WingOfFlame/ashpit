@@ -23,7 +23,7 @@ future features:
  
 This software is released under the GNU GENERAL PUBLIC LICENSE, see attached file gpl.txt
 */
-package Reversi_UI;
+package Reversi;
 
 import java.awt.*;
 import java.io.*;
@@ -49,9 +49,9 @@ public class Reversi extends javax.swing.JFrame {
     String gameTheme = "classic";
     Move hint = null;
     Piece current = Piece.black;
-    boolean gameOn = false, moveAllowed = false;
-    ImageIcon button_black = new ImageIcon(Reversi.class.getResource("black.png"));
-    ImageIcon button_white = new ImageIcon(Reversi.class.getResource("white.png"));
+    boolean gameOn = false, moveAllowed = true;
+    ImageIcon button_black = new ImageIcon(Reversi.class.getResource("button_black.jpg"));
+    ImageIcon button_white = new ImageIcon(Reversi.class.getResource("button_white.jpg"));
     saveGame lastMove;
 
     public Reversi() {
@@ -67,9 +67,9 @@ public class Reversi extends javax.swing.JFrame {
             g.drawLine(0, i * Reversi.Square, Reversi.Width, i * Reversi.Square);
         }
         g.drawLine(0, Reversi.Height, Reversi.Width, Reversi.Height);
-        
+        if (gameOn) {
             drawPiece(g);
-        
+        }
     }
 
     public void drawPiece(Graphics g) {
@@ -108,10 +108,6 @@ public class Reversi extends javax.swing.JFrame {
     public void showWinner() {
         moveAllowed = false;
         gameOn = false;
-        HintMenu.setEnabled(false);
-        LevelMenu.setEnabled(false);
-        SaveMenu.setEnabled(false);
-        UndoMenu.setEnabled(false);
         if (board.counter[0] > board.counter[1]) {
             JOptionPane.showMessageDialog(this, "Black win!", "Reversi", JOptionPane.INFORMATION_MESSAGE);
         } else if (board.counter[0] < board.counter[1]) {
@@ -119,8 +115,6 @@ public class Reversi extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Drawn!", "Reversi", JOptionPane.INFORMATION_MESSAGE);
         }
-        board.println();
-        repaint();
     }
 
     public void setHint(Move h) {
@@ -212,10 +206,10 @@ public class Reversi extends javax.swing.JFrame {
         SaveMenu = new javax.swing.JMenuItem();
         LoadMenu = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        UndoMenu = new javax.swing.JMenuItem();
-        HintMenu = new javax.swing.JMenuItem();
+        Undo = new javax.swing.JMenuItem();
+        Hint = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        QuitMenu = new javax.swing.JMenuItem();
+        Quit = new javax.swing.JMenuItem();
         LevelMenu = new javax.swing.JMenu();
         Level1 = new javax.swing.JRadioButtonMenuItem();
         Level2 = new javax.swing.JRadioButtonMenuItem();
@@ -248,7 +242,7 @@ public class Reversi extends javax.swing.JFrame {
         Score_W.setForeground(new java.awt.Color(255, 255, 255));
         Score_W.setText("Score_W");
 
-        BoardPanel.setBackground(new java.awt.Color(0, 153, 0));
+        BoardPanel.setBackground(java.awt.Color.green);
         BoardPanel.setMaximumSize(new java.awt.Dimension(265, 265));
         BoardPanel.setMinimumSize(new java.awt.Dimension(264, 264));
         BoardPanel.setName(""); // NOI18N
@@ -321,32 +315,32 @@ public class Reversi extends javax.swing.JFrame {
         GameMenu.add(LoadMenu);
         GameMenu.add(jSeparator1);
 
-        UndoMenu.setText("Undo");
-        UndoMenu.setEnabled(false);
-        UndoMenu.addActionListener(new java.awt.event.ActionListener() {
+        Undo.setText("Undo");
+        Undo.setEnabled(false);
+        Undo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UndoMenuActionPerformed(evt);
+                UndoActionPerformed(evt);
             }
         });
-        GameMenu.add(UndoMenu);
+        GameMenu.add(Undo);
 
-        HintMenu.setText("Hint");
-        HintMenu.setEnabled(false);
-        HintMenu.addActionListener(new java.awt.event.ActionListener() {
+        Hint.setText("Hint");
+        Hint.setEnabled(false);
+        Hint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HintMenuActionPerformed(evt);
+                HintActionPerformed(evt);
             }
         });
-        GameMenu.add(HintMenu);
+        GameMenu.add(Hint);
         GameMenu.add(jSeparator2);
 
-        QuitMenu.setText("Quit");
-        QuitMenu.addActionListener(new java.awt.event.ActionListener() {
+        Quit.setText("Quit");
+        Quit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                QuitMenuActionPerformed(evt);
+                QuitActionPerformed(evt);
             }
         });
-        GameMenu.add(QuitMenu);
+        GameMenu.add(Quit);
 
         jMenuBar1.add(GameMenu);
 
@@ -354,6 +348,11 @@ public class Reversi extends javax.swing.JFrame {
         LevelMenu.setText("Level");
         LevelMenu.setBorderPainted(true);
         LevelMenu.setEnabled(false);
+        LevelMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LevelMenuActionPerformed(evt);
+            }
+        });
 
         LevelButtons.add(Level1);
         Level1.setSelected(true);
@@ -507,14 +506,12 @@ public class Reversi extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   
-    // <editor-fold defaultstate="collapsed" desc="actionlistener">   
+// <editor-fold defaultstate="collapsed" desc="actionlistener">   
     private void NewAIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAIActionPerformed
         gameOn = true;
-        HintMenu.setEnabled(true);
+        Hint.setEnabled(true);
         LevelMenu.setEnabled(true);
         SaveMenu.setEnabled(true);
-        moveAllowed = true;
         gameLevel = 2;
         LevelLabel.setText("Level:" + Integer.toString(gameLevel - 1));
         current = Piece.black;
@@ -525,7 +522,7 @@ public class Reversi extends javax.swing.JFrame {
 
     }//GEN-LAST:event_NewAIActionPerformed
 
-    private void HintMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintMenuActionPerformed
+    private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed
         if (gameOn && gameLevel != 0) {
             Move move = new Move();
             if (board.findMove(Piece.black, gameLevel, move)) {
@@ -533,21 +530,21 @@ public class Reversi extends javax.swing.JFrame {
             }
             repaint();
         } else {
-            HintMenu.setEnabled(false);
+            Hint.setEnabled(false);
         }
-    }//GEN-LAST:event_HintMenuActionPerformed
+    }//GEN-LAST:event_HintActionPerformed
 
-    private void UndoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UndoMenuActionPerformed
+    private void UndoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UndoActionPerformed
         System.out.println(board.getCounter(Piece.black));
         System.out.println(lastMove.saved.getCounter(Piece.black));
         board.copyBoard(lastMove.saved);
         Score_B.setText(Integer.toString(board.getCounter(Piece.black)));
         Score_W.setText(Integer.toString(board.getCounter(Piece.white)));
         current = lastMove.currentPlayer;
-        UndoMenu.setEnabled(false);
+        Undo.setEnabled(false);
         repaint();
 
-    }//GEN-LAST:event_UndoMenuActionPerformed
+    }//GEN-LAST:event_UndoActionPerformed
 
     private void ClassicThemeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClassicThemeActionPerformed
         BoardPanel.setBackground(Color.green);
@@ -559,15 +556,15 @@ public class Reversi extends javax.swing.JFrame {
 
     private void ModernThemeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModernThemeActionPerformed
         BoardPanel.setBackground(Color.white);
-        button_black = new ImageIcon(Reversi.class.getResource("button_blue.png"));
-        button_white = new ImageIcon(Reversi.class.getResource("button_red.png"));
+        button_black = new ImageIcon(Reversi.class.getResource("button_blu.jpg"));
+        button_white = new ImageIcon(Reversi.class.getResource("button_red.jpg"));
         gameTheme = "Modern";
         repaint();
     }//GEN-LAST:event_ModernThemeActionPerformed
 
-    private void QuitMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitMenuActionPerformed
+    private void QuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_QuitMenuActionPerformed
+    }//GEN-LAST:event_QuitActionPerformed
 
     private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
         new Help().setVisible(true);
@@ -608,7 +605,7 @@ public class Reversi extends javax.swing.JFrame {
             int i = evt.getX() / Reversi.Square;
             int j = evt.getY() / Reversi.Square;
             lastMove.update(board, gameLevel, current);
-            UndoMenu.setEnabled(true);
+            Undo.setEnabled(true);
             if ((i < 8) && (j < 8) && (board.get(i, j) == Piece.none) && (board.move(new Move(i, j), current) != 0)) {
                 Score_B.setText(Integer.toString(board.getCounter(Piece.black)));
                 Score_W.setText(Integer.toString(board.getCounter(Piece.white)));
@@ -643,12 +640,15 @@ public class Reversi extends javax.swing.JFrame {
         repaint();
     }//GEN-LAST:event_FlatThemeActionPerformed
 
+    private void LevelMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LevelMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LevelMenuActionPerformed
+
     private void NewHumanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewHumanActionPerformed
         gameOn = true;
-        HintMenu.setEnabled(false);
+        Hint.setEnabled(false);
         LevelMenu.setEnabled(false);
         SaveMenu.setEnabled(true);
-        moveAllowed = true;
         gameLevel = 0;
         LevelLabel.setText("Black's Move");
         current = Piece.black;
@@ -687,12 +687,12 @@ public class Reversi extends javax.swing.JFrame {
             } catch (Exception ex) {
             }
             if(gameLevel!=0){
-                HintMenu.setEnabled(true);
+                Hint.setEnabled(true);
                 LevelMenu.setEnabled(true);
                 SaveMenu.setEnabled(true);
                 LevelLabel.setText("Level:" + Integer.toString(gameLevel - 1));
             }else{
-                HintMenu.setEnabled(false);
+                Hint.setEnabled(false);
                 LevelMenu.setEnabled(false);
                 SaveMenu.setEnabled(true);
                 if (current == Piece.black) {
@@ -756,7 +756,7 @@ public class Reversi extends javax.swing.JFrame {
     private javax.swing.JMenu GameMenu;
     private javax.swing.JMenuItem Help;
     private javax.swing.JMenu HelpMenu;
-    private javax.swing.JMenuItem HintMenu;
+    private javax.swing.JMenuItem Hint;
     private javax.swing.JRadioButtonMenuItem Level1;
     private javax.swing.JRadioButtonMenuItem Level2;
     private javax.swing.JRadioButtonMenuItem Level3;
@@ -770,14 +770,14 @@ public class Reversi extends javax.swing.JFrame {
     private javax.swing.JMenuItem NewAI;
     private javax.swing.JMenuItem NewHuman;
     private javax.swing.JFileChooser OpenFC;
-    private javax.swing.JMenuItem QuitMenu;
+    private javax.swing.JMenuItem Quit;
     private javax.swing.JFileChooser SaveFC;
     private javax.swing.JMenuItem SaveMenu;
     private javax.swing.JLabel Score_B;
     private javax.swing.JLabel Score_W;
     private javax.swing.ButtonGroup ThemeButtons;
     private javax.swing.JMenu ThemeMenu;
-    private javax.swing.JMenuItem UndoMenu;
+    private javax.swing.JMenuItem Undo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPopupMenu.Separator jSeparator1;

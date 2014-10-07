@@ -1,4 +1,4 @@
-package Reversi_UI;
+package Reversi;
 
 import java.io.*;
 import java.io.IOException;
@@ -16,14 +16,7 @@ public class Board {
     boolean PassCounter;
 
     public Board() {
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                board[i][j] = Piece.none;
-            }
-        }
-        counter[0] = 0;
-        counter[1] = 0;
-        PassCounter = false;
+        clear();
     }
      public void copyBoard(Board another) {
         for (int i = 0; i < 8; i++) {
@@ -220,8 +213,7 @@ public class Board {
         }
         return false;
     }
-    
-    //high value if opponent occupy more edge position
+
     private int strategy(Piece me, Piece opponent) {
         int tstrat = 0;
         for (int i = 0; i < 8; i++) {
@@ -266,6 +258,7 @@ public class Board {
         int[] TempCounter = new int[2];
         resultFindMax res = new resultFindMax();
         level--;
+        System.out.print("level is "+ level);
         res.nb = counter[0];
         res.nw = counter[1];
         for (int i = 0; i < 8; i++) {
@@ -310,8 +303,7 @@ public class Board {
         boolean found;
         resultFindMax res = new resultFindMax();
         Random random = new Random();
-        
-        //since there are max 6 steps left, AI cant predict beyond level6
+
         if (counter[0] + counter[1] >= 52 + llevel) {
             llevel = counter[0] + counter[1] - 52;
         }
