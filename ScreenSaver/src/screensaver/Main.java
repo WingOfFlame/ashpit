@@ -37,9 +37,9 @@ public class Main {
 
 		child0.transform(AffineTransform.getTranslateInstance(150, 0));
                 child0.transform(AffineTransform.getRotateInstance(Math.PI / 2));
-
+                
                 child1.transform(AffineTransform.getTranslateInstance(0, 200));
-		child1.transform(AffineTransform.getRotateInstance(Math.PI));
+		child1.transform(AffineTransform.getRotateInstance(3*Math.PI/2));
 
 		child0_0.transform(AffineTransform.getTranslateInstance(75, 0));
 		child0_0.transform(AffineTransform.getRotateInstance(Math.PI / 2));
