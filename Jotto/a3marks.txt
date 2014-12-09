@@ -1,0 +1,59 @@
+
+CS349 ASSIGNMENT 3 MARKING SCHEME
+MARKED BY: y57luo (@uwaterloo.ca)
+
+GUIDELINES
+The assignment needs to compile and run in order for the TA to mark it. 
+If it doesn't compile, but the TA is able to get it working, you will 
+only lose marks for the "Compiles and runs" section. 
+If they cannot get it to compile, you receive zero for the assignment.
+
+Remark requests will be considered for 2 weeks following the release of 
+the marks for this assignment. 
+To request a remark, contact the TA that marked your assignment (identified 
+above) during office hours or through email.
+
+MARKS
+Total: 110/100 (With up to 10 bonus pts.) 
+
+Compiles and Runs (5/5%)
+[5/5] Makefile exists; README file exists with enhancements documented; 'make run' compiles and runs
+
+Working Game (30/30%)
+[10/10] The game correctly computes and displays the number of partial and exact matches
+	// -5 incorrect partial/exact matches
+[5/5] Player guesses are validated, and players are informed of illegal guesses
+[5/5] The game ends when target is guessed or when all guesses have been exhausted
+[5/5] The system uses at least one JTable or JTree
+[5/5] Target word can be generated automatically and manually
+
+Program Architecture (30/30%)
+[10/10] Models and views are clearly separated 
+      (e.g., No view-specific code in the model. Views do not duplicate model state, Etc.)
+[10/10] There are at least 3 views which all implement a (restricted) common interface 
+      // -5 for no common interface
+      // -2 for missing one view
+[5/5] Views should be registered to the model as abstract types, and maintained in a list	 
+     // -2 for no list used to maintain views
+[5/5] When a model's state changes, all registered views should be notified via each view's update method
+
+GUI Layout & Aesthetics (15/15%)
+[5/5] Pleasing layout using Gestalt principles
+[5/5] Layout is maintained through a reasonable range of window sizes
+[5/5] Use of nested layout managers
+
+Enhancements (30/30%)
+(first three items would be sufficient for full marks, if done well)
+[X] A view showing which letters have been guessed and which have not.
+[X] Allow user to annotate letters with "must be in the target" and "can't be in the target".
+[X] Generate at least 2 kinds of hints 
+   [X] lists of words that contain or exclude given sets of letters.
+   [X] list of words consistent with all previous guesses (which, if used, brings the game to a speedy end)).
+   [] other
+[] A pop-over that shows frequencies with which the given letter occurs.
+[] Different skill levels
+[] Multiplayer
+[] other
+
+- done well: 'X'
+- need to be improved: '-'
