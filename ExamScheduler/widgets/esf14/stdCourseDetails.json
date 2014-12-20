@@ -1,0 +1,1033 @@
+{
+    "meta": {
+        "date": "2014-11-18T17:22:44.021-05:00",
+        "status": "200 OK",
+        "source": "oat.cs.uwaterloo.ca:9444/api/v1/student/stdCourseDetails/j62hu"
+    },
+    "result": {
+        "userid": "j62hu",
+        "terms": [{
+                "term": "1129",
+                "projectedLevel": "1A",
+                "courses": [{
+                        "subjectCode": "AFM",
+                        "catalog": "101",
+                        "transferCourse": false,
+                        "courseShortTitle": "Intro to Financial Accounting",
+                        "sections": [{
+                                "sectionCode": "002",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "HH 1101",
+                                        "meetDates": "09/10 - 12/03",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "09:30-10:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "103",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "HH 1104",
+                                        "meetDates": "09/10 - 12/03",
+                                        "meetDays": "F",
+                                        "meetTimes": "11:30-12:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/18",
+                                        "meetDays": "Th",
+                                        "meetTimes": "18:30-20:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CHEM",
+                        "catalog": "120",
+                        "transferCourse": true,
+                        "courseShortTitle": null,
+                        "sections": []
+                    },
+                    {
+                        "subjectCode": "CHEM",
+                        "catalog": "123",
+                        "transferCourse": true,
+                        "courseShortTitle": null,
+                        "sections": []
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "135",
+                        "transferCourse": false,
+                        "courseShortTitle": "Designing Functional Programs",
+                        "sections": [{
+                                "sectionCode": "005",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4061",
+                                        "meetDates": "09/10 - 12/03",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "13:00-14:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "110",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 1056",
+                                        "meetDates": "09/10 - 12/03",
+                                        "meetDays": "F",
+                                        "meetTimes": "13:30-14:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/29",
+                                        "meetDays": "M",
+                                        "meetTimes": "19:00-20:50"
+                                    },
+                                    {
+                                        "room": null,
+                                        "meetDates": "10/01",
+                                        "meetDays": "M",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "MATH",
+                        "catalog": "135",
+                        "transferCourse": false,
+                        "courseShortTitle": "Algebra for Hons Mathematics",
+                        "sections": [{
+                                "sectionCode": "008",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "B1 271",
+                                        "meetDates": "09/10 - 12/03",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "12:30-13:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/15",
+                                        "meetDays": "M",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "MATH",
+                        "catalog": "137",
+                        "transferCourse": true,
+                        "courseShortTitle": null,
+                        "sections": []
+                    },
+                    {
+                        "subjectCode": "MATH",
+                        "catalog": "138",
+                        "transferCourse": false,
+                        "courseShortTitle": "Calculus 2 For Honours Math",
+                        "sections": [{
+                                "sectionCode": "003",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 2035",
+                                        "meetDates": "09/10 - 12/03",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "08:30-09:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 2054",
+                                        "meetDates": "09/10 - 12/03",
+                                        "meetDays": "W",
+                                        "meetTimes": "16:30-17:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/22",
+                                        "meetDays": "M",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "SEQ",
+                        "catalog": "2B",
+                        "transferCourse": false,
+                        "courseShortTitle": "Co-op Sequence B",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "WRK",
+                                "instructors": [],
+                                "meets": []
+                            }]
+                    }]
+            },
+            {
+                "term": "1131",
+                "projectedLevel": "1B",
+                "courses": [{
+                        "subjectCode": "AFM",
+                        "catalog": "102",
+                        "transferCourse": false,
+                        "courseShortTitle": "Intro to Managerial Acct",
+                        "sections": [{
+                                "sectionCode": "003",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "HH 1101",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "12:30-13:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "HH 1104",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "F",
+                                        "meetTimes": "08:30-09:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "02/28",
+                                        "meetDays": "Th",
+                                        "meetTimes": "17:30-19:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "136",
+                        "transferCourse": false,
+                        "courseShortTitle": "Elem Alg Design & Data Abstrac",
+                        "sections": [{
+                                "sectionCode": "003",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4045",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "11:30-12:50"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "108",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4058",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "M",
+                                        "meetTimes": "14:30-15:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "03/04",
+                                        "meetDays": "M",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "ESL",
+                        "catalog": "102R",
+                        "transferCourse": false,
+                        "courseShortTitle": "Error Correction in Writing",
+                        "sections": [{
+                                "sectionCode": "006",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "REN 0201",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "MW",
+                                        "meetTimes": "08:30-09:50"
+                                    },
+                                    {
+                                        "room": "REN 2104",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "F",
+                                        "meetTimes": "10:00-11:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "MATH",
+                        "catalog": "136",
+                        "transferCourse": false,
+                        "courseShortTitle": "Linear Algebra 1 (Hon Math)",
+                        "sections": [{
+                                "sectionCode": "006",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 2066",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "13:30-14:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "02/11",
+                                        "meetDays": "M",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "PD",
+                        "catalog": "1",
+                        "transferCourse": false,
+                        "courseShortTitle": "Co-op Fundamentals",
+                        "sections": [{
+                                "sectionCode": "083",
+                                "componentCode": "OLN",
+                                "instructors": [],
+                                "meets": []
+                            },
+                            {
+                                "sectionCode": "182",
+                                "componentCode": "PRA",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "HH 159",
+                                        "meetDates": "01/08",
+                                        "meetDays": "T",
+                                        "meetTimes": "16:30-17:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "STAT",
+                        "catalog": "230",
+                        "transferCourse": false,
+                        "courseShortTitle": "Probability",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "M3 1006",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "11:30-12:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "RCH 101",
+                                        "meetDates": "01/07 - 04/08",
+                                        "meetDays": "W",
+                                        "meetTimes": "15:30-16:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "03/14",
+                                        "meetDays": "Th",
+                                        "meetTimes": "16:30-18:20"
+                                    },
+                                    {
+                                        "room": null,
+                                        "meetDates": "02/07",
+                                        "meetDays": "Th",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    }]
+            },
+            {
+                "term": "1135",
+                "projectedLevel": "2A",
+                "courses": [{
+                        "subjectCode": "COOP",
+                        "catalog": "1",
+                        "transferCourse": false,
+                        "courseShortTitle": "Co-operative Work Term",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "WRK",
+                                "instructors": [],
+                                "meets": []
+                            }]
+                    },
+                    {
+                        "subjectCode": "PD",
+                        "catalog": "2",
+                        "transferCourse": false,
+                        "courseShortTitle": "Critical Reflec'n & Rprt Wrtng",
+                        "sections": [{
+                                "sectionCode": "081",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": []
+                            }]
+                    }]
+            },
+            {
+                "term": "1139",
+                "projectedLevel": "2A",
+                "courses": [{
+                        "subjectCode": "ACTSC",
+                        "catalog": "231",
+                        "transferCourse": false,
+                        "courseShortTitle": "Mathematics of Finance",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "AL 116",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "10:30-11:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "M3 1006",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "F",
+                                        "meetTimes": "15:30-16:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "245",
+                        "transferCourse": false,
+                        "courseShortTitle": "Logic and Computation",
+                        "sections": [{
+                                "sectionCode": "002",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 2035",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "10:00-11:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "102",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4063",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "M",
+                                        "meetTimes": "11:30-12:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/31",
+                                        "meetDays": "Th",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "246",
+                        "transferCourse": false,
+                        "courseShortTitle": "Object-Oriented Software Devel",
+                        "sections": [{
+                                "sectionCode": "004",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "B2 350",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "13:00-14:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "106",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4041",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "W",
+                                        "meetTimes": "15:30-16:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/24",
+                                        "meetDays": "Th",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "MATH",
+                        "catalog": "239",
+                        "transferCourse": false,
+                        "courseShortTitle": "Intro to Combinatorics",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "STJ 3014",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "12:30-13:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "STJ 3015",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "W",
+                                        "meetTimes": "16:30-17:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "202",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "11/07",
+                                        "meetDays": "Th",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "STAT",
+                        "catalog": "231",
+                        "transferCourse": false,
+                        "courseShortTitle": "Statistics",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "DC 1350",
+                                        "meetDates": "09/09 - 12/02",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "13:30-14:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "11/12",
+                                        "meetDays": "T",
+                                        "meetTimes": "16:30-18:20"
+                                    },
+                                    {
+                                        "room": null,
+                                        "meetDates": "10/08",
+                                        "meetDays": "T",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    }]
+            },
+            {
+                "term": "1141",
+                "projectedLevel": "2B",
+                "courses": [{
+                        "subjectCode": "ACTSC",
+                        "catalog": "371",
+                        "transferCourse": false,
+                        "courseShortTitle": "Corporate Finance 1",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "DC 1351",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "09:30-10:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "DC 1351",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "M",
+                                        "meetTimes": "16:30-17:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "240",
+                        "transferCourse": false,
+                        "courseShortTitle": "Data Structures & Data Mgmt",
+                        "sections": [{
+                                "sectionCode": "002",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4045",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "11:30-12:50"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "103",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4060",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "W",
+                                        "meetTimes": "14:30-15:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "02/27",
+                                        "meetDays": "Th",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "241",
+                        "transferCourse": false,
+                        "courseShortTitle": "Foundations of Sequential Prog",
+                        "sections": [{
+                                "sectionCode": "003",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "OPT 1129",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "12:30-13:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "104",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4060",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "F",
+                                        "meetTimes": "15:30-16:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "03/04",
+                                        "meetDays": "T",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "ECON",
+                        "catalog": "101",
+                        "transferCourse": false,
+                        "courseShortTitle": "Intro to Microeconomics",
+                        "sections": [{
+                                "sectionCode": "003",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "DC 1350",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "13:00-14:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "02/28",
+                                        "meetDays": "F",
+                                        "meetTimes": "16:30-18:00"
+                                    },
+                                    {
+                                        "room": null,
+                                        "meetDates": "01/31",
+                                        "meetDays": "F",
+                                        "meetTimes": "16:30-18:00"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "ECON",
+                        "catalog": "102",
+                        "transferCourse": false,
+                        "courseShortTitle": "Intro to Macroeconomics",
+                        "sections": [{
+                                "sectionCode": "004",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "DC 1350",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "M",
+                                        "meetTimes": "18:00-20:50"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "03/07",
+                                        "meetDays": "F",
+                                        "meetTimes": "16:30-18:00"
+                                    },
+                                    {
+                                        "room": null,
+                                        "meetDates": "02/07",
+                                        "meetDays": "F",
+                                        "meetTimes": "16:30-18:00"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "ENGL",
+                        "catalog": "119",
+                        "transferCourse": false,
+                        "courseShortTitle": "Communications in Math & CS",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "RCH 101",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "M",
+                                        "meetTimes": "14:30-15:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "109",
+                                "componentCode": "TUT",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "EV3 3406",
+                                        "meetDates": "01/06 - 04/04",
+                                        "meetDays": "F",
+                                        "meetTimes": "13:30-15:20"
+                                    }]
+                            }]
+                    }]
+            },
+            {
+                "term": "1145",
+                "projectedLevel": "3A",
+                "courses": [{
+                        "subjectCode": "COOP",
+                        "catalog": "2",
+                        "transferCourse": false,
+                        "courseShortTitle": "Co-operative Work Term",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "WRK",
+                                "instructors": [],
+                                "meets": []
+                            }]
+                    },
+                    {
+                        "subjectCode": "PD",
+                        "catalog": "7",
+                        "transferCourse": false,
+                        "courseShortTitle": "Conflict Resolution",
+                        "sections": [{
+                                "sectionCode": "081",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": []
+                            }]
+                    }]
+            },
+            {
+                "term": "1149",
+                "projectedLevel": "3A",
+                "courses": [{
+                        "subjectCode": "CO",
+                        "catalog": "250",
+                        "transferCourse": false,
+                        "courseShortTitle": "Introduction to Optimization",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4059",
+                                        "meetDates": "09/08 - 12/01",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "14:30-15:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "251",
+                        "transferCourse": false,
+                        "courseShortTitle": "Computer Organization & Design",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 2038",
+                                        "meetDates": "09/08 - 12/01",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "12:30-13:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/21",
+                                        "meetDays": "T",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "341",
+                        "transferCourse": false,
+                        "courseShortTitle": "Algorithms",
+                        "sections": [{
+                                "sectionCode": "002",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 2038",
+                                        "meetDates": "09/08 - 12/01",
+                                        "meetDays": "TTh",
+                                        "meetTimes": "11:30-12:50"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/21",
+                                        "meetDays": "T",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "348",
+                        "transferCourse": false,
+                        "courseShortTitle": "Intro to Database Management",
+                        "sections": [{
+                                "sectionCode": "002",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 2038",
+                                        "meetDates": "09/08 - 12/01",
+                                        "meetDays": "MW",
+                                        "meetTimes": "14:30-15:50"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/14",
+                                        "meetDays": "T",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "CS",
+                        "catalog": "349",
+                        "transferCourse": false,
+                        "courseShortTitle": "User Interfaces",
+                        "sections": [{
+                                "sectionCode": "002",
+                                "componentCode": "LEC",
+                                "instructors": ["Byron Weber Becker"],
+                                "meets": [{
+                                        "room": "MC 4060",
+                                        "meetDates": "09/08 - 12/01",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "11:30-12:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "101",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/22",
+                                        "meetDays": "W",
+                                        "meetTimes": "19:00-20:50"
+                                    }]
+                            }]
+                    },
+                    {
+                        "subjectCode": "MATH",
+                        "catalog": "237",
+                        "transferCourse": false,
+                        "courseShortTitle": "Calculus 3 for Honours Math",
+                        "sections": [{
+                                "sectionCode": "004",
+                                "componentCode": "LEC",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": "MC 4061",
+                                        "meetDates": "09/08 - 12/01",
+                                        "meetDays": "MWF",
+                                        "meetTimes": "10:30-11:20"
+                                    }]
+                            },
+                            {
+                                "sectionCode": "201",
+                                "componentCode": "TST",
+                                "instructors": [],
+                                "meets": [{
+                                        "room": null,
+                                        "meetDates": "10/28",
+                                        "meetDays": "T",
+                                        "meetTimes": "16:30-18:20"
+                                    }]
+                            }]
+                    }]
+            },
+            {
+                "term": "1151",
+                "projectedLevel": "3B",
+                "courses": [{
+                        "subjectCode": "COOP",
+                        "catalog": "3",
+                        "transferCourse": false,
+                        "courseShortTitle": "Co-operative Work Term",
+                        "sections": [{
+                                "sectionCode": "001",
+                                "componentCode": "WRK",
+                                "instructors": [],
+                                "meets": []
+                            }]
+                    },
+                    {
+                        "subjectCode": "PD",
+                        "catalog": "3",
+                        "transferCourse": false,
+                        "courseShortTitle": "Communication",
+                        "sections": [{
+                                "sectionCode": "701",
+                                "componentCode": "PRA",
+                                "instructors": [],
+                                "meets": []
+                            }]
+                    }]
+            }]
+    }
+}

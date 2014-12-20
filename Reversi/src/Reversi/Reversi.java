@@ -1,39 +1,46 @@
 /*
-Reversi
- 
-Reversi (Othello) is a game based on a grid with eight rows and eight columns, played between you and the computer, by adding pieces with two sides: black and white.
-At the beginning of the game there are 4 pieces in the grid, the player with the black pieces is the first one to place his piece on the board.
-Each player must place a piece in a position that there exists at least one straight (horizontal, vertical, or diagonal) line between the new piece and another piece of the same color, with one or more contiguous opposite pieces between them. 
- 
-Usage:  java Reversi
- 
-10-12-2006 version 0.1:     initial release
-26-12-2006 version 0.15:    added support for applet
-01-11-2007 version 0.16:    minor improvement in level handling
-06-19-2014 version 1.0:     redesigned user interface
-                            added undo and save/load features
+ Reversi
 
- 
-Requirement: Java 1.5 or later
- 
-future features:
-- logging of moves
-- autoplay
-- sound
- 
-This software is released under the GNU GENERAL PUBLIC LICENSE, see attached file gpl.txt
-*/
+ Reversi (Othello) is a game based on a grid with eight rows and eight columns, played between you and the computer, by adding pieces with two sides: black and white.
+ At the beginning of the game there are 4 pieces in the grid, the player with the black pieces is the first one to place his piece on the board.
+ Each player must place a piece in a position that there exists at least one straight (horizontal, vertical, or diagonal) line between the new piece and another piece of the same color, with one or more contiguous opposite pieces between them.
+
+ Usage:  java Reversi
+
+ 10-12-2006 version 0.1:     initial release
+ 26-12-2006 version 0.15:    added support for applet
+ 01-11-2007 version 0.16:    minor improvement in level handling
+ 06-19-2014 version 1.0:     redesigned user interface
+ added undo and save/load features
+
+
+ Requirement: Java 1.5 or later
+
+ future features:
+ - logging of moves
+ - autoplay
+ - sound
+
+ This software is released under the GNU GENERAL PUBLIC LICENSE, see attached file gpl.txt
+ */
 package Reversi;
 
-import java.awt.*;
-import java.io.*;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Graphics;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
- * The source files are downloaded from http://trovami.altervista.org/ at Jun 16 2014
- * This software is redesigned hereafter.
+ * The source files are downloaded from http://trovami.altervista.org/ at Jun 16
+ * 2014 This software is redesigned hereafter.
+ *
  * @author Justin Hu
  */
 public class Reversi extends javax.swing.JFrame {
@@ -156,8 +163,9 @@ public class Reversi extends javax.swing.JFrame {
             showWinner();
         }
     }
-    public void gameLevelAdjust(){
-        switch(gameLevel){
+
+    public void gameLevelAdjust() {
+        switch (gameLevel) {
             case 2:
                 Level1.setSelected(true);
                 break;
@@ -174,8 +182,9 @@ public class Reversi extends javax.swing.JFrame {
                 Level5.setSelected(true);
                 break;
         }
-    
+
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -197,7 +206,6 @@ public class Reversi extends javax.swing.JFrame {
                 drawPanel(g);
             }
         };
-        jPasswordField1 = new javax.swing.JPasswordField();
         LevelLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         GameMenu = new javax.swing.JMenu();
@@ -254,23 +262,15 @@ public class Reversi extends javax.swing.JFrame {
             }
         });
 
-        jPasswordField1.setText("jPasswordField1");
-
         javax.swing.GroupLayout BoardPanelLayout = new javax.swing.GroupLayout(BoardPanel);
         BoardPanel.setLayout(BoardPanelLayout);
         BoardPanelLayout.setHorizontalGroup(
             BoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BoardPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
+            .addGap(0, 265, Short.MAX_VALUE)
         );
         BoardPanelLayout.setVerticalGroup(
             BoardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BoardPanelLayout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(139, Short.MAX_VALUE))
+            .addGap(0, 265, Short.MAX_VALUE)
         );
 
         LevelLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -515,7 +515,7 @@ public class Reversi extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-// <editor-fold defaultstate="collapsed" desc="actionlistener">   
+// <editor-fold defaultstate="collapsed" desc="actionlistener">
     private void NewAIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewAIActionPerformed
         gameOn = true;
         Hint.setEnabled(true);
@@ -695,32 +695,32 @@ public class Reversi extends javax.swing.JFrame {
                 gameLevel = Integer.parseInt(br.readLine());
             } catch (Exception ex) {
             }
-            if(gameLevel!=0){
+            if (gameLevel != 0) {
                 Hint.setEnabled(true);
                 LevelMenu.setEnabled(true);
                 SaveMenu.setEnabled(true);
                 LevelLabel.setText("Level:" + Integer.toString(gameLevel - 1));
-            }else{
+            } else {
                 Hint.setEnabled(false);
                 LevelMenu.setEnabled(false);
                 SaveMenu.setEnabled(true);
                 if (current == Piece.black) {
-                   LevelLabel.setText("Black's Move");
+                    LevelLabel.setText("Black's Move");
                 } else {
                     LevelLabel.setText("White's Move");
                 }
             }
             lastMove = new saveGame(board, gameLevel, current);
-                    Score_B.setText(Integer.toString(board.getCounter(Piece.black)));
-        Score_W.setText(Integer.toString(board.getCounter(Piece.white)));
-        gameLevelAdjust();
-        
+            Score_B.setText(Integer.toString(board.getCounter(Piece.black)));
+            Score_W.setText(Integer.toString(board.getCounter(Piece.white)));
+            gameLevelAdjust();
+
             repaint();
         } else {
             System.out.println("File access cancelled by user.");
         }
     }//GEN-LAST:event_LoadMenuActionPerformed
-// </editor-fold>   
+// </editor-fold>
 
     /**
      * @param args the command line arguments
@@ -729,7 +729,7 @@ public class Reversi extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -789,7 +789,6 @@ public class Reversi extends javax.swing.JFrame {
     private javax.swing.JMenuItem Undo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     // End of variables declaration//GEN-END:variables

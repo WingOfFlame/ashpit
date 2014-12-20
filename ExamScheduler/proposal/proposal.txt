@@ -1,0 +1,34 @@
+Assignment 4 Proposal 
+Members: Justin Hu 		j62hu 
+         and Xin Lin 	x58lin
+
+Widget id: esf14
+Widget name: Exam Scheduler
+Widget description: 
+-Imports exam schedule for the user logged in.
+-Allows user to add to-dos with deadline and priority for each courses. 
+-Uses colors to identify courses and indicates deadlines and priority.
+Key: 1defbc67-656a-41b6-90dd-23df55d6ae6a
+
+
+Overview 
+The widget help UW students by organizing every student's specific exam information (subject catalogue,location,time, and date) in a chronological order in one simple interface. This eliminates the need to filter through hundred of courses to find the few courses that you are taken and the need to constantly remembering or checking the time and date of exams. 
+Moreover, this widget is also design to help UW students to organize their exam studying schedule. The widget has a built-in to-do list where the user can add items like "Complete chapter 9 by Dec 4". The widget make use of the count down and colour to inform the user about the upcoming exams and their exam to-dos. 
+
+
+
+
+Web Services (what web services will it use?)
+The widget proposed will make use of the following web services.
+-Academic data for the user currently logged into the portal. 
+	The widget needs to obtain the list of courses details of the user logged into the portal. The widge will make use of https://cs349.student.cs.uwaterloo.ca:9410/api/v1/student/stdCourseDetails/UUUU where UUUU is the userid of the user logged in.
+-Current term
+	This widget needs to know the current term in order to filter out the courses taken by the user. The data will be provided by UW Open Data API V2. More specifically,https://api.uwaterloo.ca/v2/terms/list.json.
+-Current term exam schedule of the courses taken by the user. 
+	To do this, the widget will make use of the data obtained from UW Open Data API V2. More specifically, https://api.uwaterloo.ca/v2/courses/{subject}/{catalog_number}/examschedule.json.
+
+External Libraries
+With almost zero experience in javascript, we have not realized the usefulness of any other external libraries. If we ever come across the necessarity of using external libraries in the future, we will update our proposal to reflect it.
+
+Challenges 
+Both of us have very limited experience using HTML, CSS and javascript. Thus, we will face more technical challenges than some of the other students. One of the challenges that we may face would be to interpreting and integrating data from the web services described above. Another technical challenge is to create HTML and CSS that exctly present what we want our interface to look like. However, these challenge can be overcome with getting more familar with the language by reading sample code, tutorial, trial and error and with help of Google. Another possible challenge is to have both memebers committed and complete their tasks on time. At last, there is a challenge of using subversion. We may have been modifying the same file which would result in a conflict. To help avoid potential merging issue of subversion, each member should have their own local copy just in case.

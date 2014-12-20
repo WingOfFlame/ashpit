@@ -1,0 +1,139 @@
+mainView
+@@@@
+<div id='esf14_mainView'>
+    <H1 id="esf14_bio"></H1>
+    <DIV id="esf14_courseList"></DIV></DIV>
+</div>
+@@@@
+bio
+@@@@
+<h4>{{firstName}} {{lastName}}'s Exams</h4>
+@@@@
+courses
+@@@@
+<div>
+<div class="list-group">
+    {{#courses}}
+        <a href="#" class="list-group-item" id = "esf14_Course_{{id}}">
+            {{subjectCode}} {{catalog}}
+            <span class="label label-primary pull-right">
+                    <span class="glyphicon glyphicon-time"></span>
+                    {{#exam_info.count_down}}{{exam_info.date}}{{/exam_info.count_down}}
+            </span>
+        </a>
+    {{/courses}}
+    
+</div>
+<div class="alert alert-info" role="alert">Please note that exam information for online courses are not available, thus the exam dates for online courses are inaccurate.</div>
+</div>
+@@@@
+eventlistView
+@@@@
+
+<div id='esf14_eventlistView'>
+    <h4>{{subjectCode}} {{catalog}} Exam To Do's</h4>
+    <div class="alert alert-warning" role="alert"><strong> {{#exam_info.count_down}}{{exam_info.date}}{{/exam_info.count_down}} Days Left</strong> until {{exam_info.date}}</div>
+
+    <div class="list-group">
+        {{#eventArray}}
+            <a href="#" class="{{color}}"  id = "esf14_{{eid}}" data-toggle="modal" data-target="#esf14_eventModal">
+                {{name}}
+                <span class="label label-primary pull-right">
+                        <span class="glyphicon  {{icon}}"></span>
+                        {{#exam_info.count_down}}{{date}}{{/exam_info.count_down}}
+                </span>
+                <br>
+                Due: {{date}}
+            </a>
+        {{/eventArray}}
+    </div>
+    <div class="list-group">
+        {{#completeArray}}
+            <a href="#" class="{{color}}"  id = "esf14_{{eid}}" data-toggle="modal" data-target="#esf14_eventModal">
+                {{name}}
+                <span class="label label-primary pull-right">
+                        <span class="glyphicon {{icon}}"></span>
+                </span>
+                <br>
+                Deadline: {{date}}
+                <br>
+                Completion Date: {{cdate}}
+            </a>
+        {{/completeArray}}
+    </div>
+    <div class = "btn-group-horizontal text-center">
+    <button id='esf14_GoBack' class="btn btn-default">Go Back</button>
+    <button id='esf14_AddEvent' class="btn btn-default" data-toggle="modal" data-target="#esf14_eventModal">Add Event</button>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id = "esf14_eventModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span >&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="esf14_modalTitle">Course Title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">Title</span>
+                    <input type="text" class = "form-control" id = "esf14_title" placeholder="Insert Title Here"></input>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Month</span>
+                    <select class = "form-control"id = esf14_eventMonth>
+                    </select>
+                    <span class="input-group-addon">Day</span>
+                    <select class = "form-control" id = esf14_eventDay>
+                    </select>
+
+                </div>  
+              
+                <div class="input-group">
+                    <span class="input-group-addon">Priority</span>
+                    <div class="btn-group " data-toggle="buttons" id="esf14_prioritygroup">
+                        <label class="btn btn-default" id = "esf14_eventHighPrioritybtn">
+                            <input type="radio" name="options" id="esf14_eventHighPriority" value = 3>High</label>
+                        <label class="btn btn-default active" id ="esf14_eventMediumPrioritybtn">
+                            <input type="radio" name="options" id="esf14_eventMediumPriority" value = 2 checked>Medium</label>
+                        <label class="btn btn-default" id = "esf14_eventLowPrioritybtn">
+                            <input type="radio" name="options"  id="esf14_eventLowPriority" value = 1>Low</label>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                <label class="control-label" for="esf14_eventNotes">Notes:</label>
+                <textarea style="width:document.getElementById("esf14_eventModal").width-30;height:width:document.getElementById("esf14_eventModal").height-0" class = "form-control" id = "esf14_eventNotes" placeholder="Additional Notes"></textarea>
+                </div>
+
+         
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="esf14_completeEvent" data-dismiss="modal" data-target="esf14_eventModal">Complete</button>
+                <button type="button" class="btn btn-warning" id="esf14_uncompleteEvent" data-dismiss="modal" data-target="esf14_eventModal">Uncomplete</button>
+                <button type="button" class="btn btn-danger" id="esf14_deleteEvent">Delete</button>
+                <button type="button" id='esf14_addEvent' class="btn btn-primary">Add</button>
+                <button type="button" id='esf14_editEvent' class="btn btn-primary">Edit</button>
+                <button type="button" id='esf14_saveEvent' class="btn btn-primary">Save</button>
+                <button type="button" id='esf14_cancelEvent' class="btn btn-default" data-dismiss="modal" data-target="esf14_eventModal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@@@@
+courseD
+@@@@
+<h4>{{course.subject}} {{course.catalog_number}}: {{course.title}}</h4>
+<p>{{course.description}}</p>
+
+@@@@
+error1
+@@@@
+<p>view1 error.</p>
+
+

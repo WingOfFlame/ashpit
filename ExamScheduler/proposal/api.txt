@@ -1,0 +1,37 @@
+
+https://api.uwaterloo.ca/v2/foodservices/menu.json
+
+?key=d491e0bb128b7386e4975f618b62543f
+      $.getJSON("https://" + server + "/api/v1/student/stdBio/" + userid,
+      // Initialize courses
+      $.getJSON("https://" + server + "/api/v1/student/stdCourseDetails/" + userid,
+
+stdBio, stdCourses, stdBioCourses, stdCourseDetails, stdGrades
+
+
+bus=>need to convert to json
+infosession=> no recent data
+
+exam schedule=>
+two api available 
+
+/terms/{term}/examschedule.{format}
+https://api.uwaterloo.ca/v2/terms/1139/examschedule.json
+
+/courses/{subject}/{catalog_number}/examschedule.{format}
+https://api.uwaterloo.ca/v2/courses/CS/486/examschedule.json
+
+Overview (what problem is your widget trying to solve for people?)
+-Find exam schedule without the need to find the correct link(received in email from uw) and look up the specific courses in hundreds of lines.
+-One click to load 
+
+Web Services (what web services will it use?)
+-UW API v2
+-https://cs349.student.cs.uwaterloo.ca:9410/api/v1/student/SSSS/UUUU
+-json store (maybe)
+
+Interaction Sequence Diagram (see Design Process, slide 20)
+
+Interface Schematics (see above slide)
+
+Challenges (describe what you anticipate will be the implementation challenges; eg: integrating data from Twitter and api.uwaterloo, validating data input from users, displaying a lot of data in a compact space, ...)

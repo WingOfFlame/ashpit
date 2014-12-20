@@ -1,0 +1,58 @@
+===========================================================================================================
+
+Updated by Justin:@11-17 18:00pm
+			
+-edited esf14.js/css/main
+-our widget can switch back and forth between 3 templates/views
+-main view would be view 1
+-course detail would be view 2
+-event detail would be view 3
+-Justin will layout main view and transition from view 1 to view 2
+-Xin will work on view 2 to view 3
+-leave color view to the last
+
+-IF YOU HAVE BETTER IMPLEMENTATION, DO IT AND UPDATE
+
+===========================================================================================================
+
+Updated by Xin:@11-18 4:30AM 
+			
+-change the name of View3 to addeventView
+-chagne the name of View2 to eventlistView
+-added stuff for view3 in esf14.js and templates.txt
+	- the basic html
+	- the javascript needed to add an event
+-I did not use dropdown for priority, I feel like radio button would be better, should we change our proposal?
+===========================================================================================================
+
+Updated by Justin:@11-18 19:00PM 
+* THIS IS NOT A MAJOR CHANGE AND I DONT THINK WE HAVE TO UPDATE OUR PROPOSAL. THE FUNCTIONALITY IS SAME
+-changed view1 to MainView
+-trying to add course info list and student bio info. 
+-added content to template.txt to reflect the above changes
+-adding 2 fields: current_term and exams to model
+-next step: filter course info list to have courses of current term only, retrive exam schedule of these courses, combine these info to create a list view
+
+===========================================================================================================
+
+Updated by Justin:@11-18 20:30PM 
+-done course filtering(so freaking hard debugging T.T)
+
+===========================================================================================================
+
+Updated by Justin:@11-20 12:30PM 
+
+-onclick function get lost if we replace html. so each time we change view we call init() to restore onclick function, and updateview to restore data from saved variable.
+-got list view work
+-added onclick function to each listed course
+-rendered visual of buttons and list with bootstrap
+
+
+===========================================================================================================
+
+Updated by Xin:@11-26 12:48AM
+
+The thing runs locally now, if you want to turn of local mode, go to the model init, and set var local = false
+But! there is a bug, which is like the list doesnt show up immediately, but click next and then go back, you will see it
+
+One more thing, the link from course to arrayview should work now (click function was modified)

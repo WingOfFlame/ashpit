@@ -1,0 +1,11 @@
+
+
+Looks good.
+
+There are a number of separate pieces.  I'd urge you to prioritize what
+you want to get done and finish/polish those pieces before you move on
+to lower priority items.  For example, I'd think that the color-picker
+would be quite low priority.
+
+20/20
+

@@ -119,6 +119,8 @@ public class Main {
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+
+        //need Accessing embedded resource files from your project
     }
 
 }
