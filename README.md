@@ -1,4 +1,5 @@
 # ashpit
 GNU/copyleft
 
-This repo is for school/personal projects demo. Each folder is an individual project.
+This repo is for code demo. 
+Each individual folder is a stand alone project.
