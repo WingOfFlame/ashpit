@@ -1,4 +1,4 @@
-function esf14(userid, htmlId) {
+function ExamScheduler(userid, htmlId) {
     "use strict";
     var key = "2f0d72e2-ba37-40ac-b0f4-e3d4e7352b2b";
     var wsURL = "https://" + server;
@@ -932,7 +932,7 @@ function esf14(userid, htmlId) {
      */
     //console.log("Initializing courseDescr(" + userid + ", " + htmlId + ")");
     try {
-        portal.loadTemplates("widgets/esf14/templates.txt",
+        portal.loadTemplates("widgets/ExamScheduler/templates.txt",
             function (t) {
                 templates = t;
                 $(htmlId).html(templates.mainView);
